@@ -11,7 +11,7 @@ function ProductList({ products, onAddToCart }) {  // ← Add onAddToCart prop
           <ProductCard 
             key={product.id} 
             product={product}
-            onAddToCart={onAddToCart}  // ← Pass it down
+            
           />
         ))}
       </div>

@@ -10,6 +10,10 @@
   margin: 0 auto;
   text-align: center;
 }
+.header-text {
+  text-decoration: none;
+  color: inherit; /* keeps white color */
+}
 
 .header-title {
   font-size: 2.5rem;
@@ -70,4 +74,80 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top section (logo + cart) */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-logo {
+  text-decoration: none;
+  color: white;
+}
+
+/* Navigation */
+.header-nav {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Search Bar */
+.search-container {
+  margin-top: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    flex: 0 0 auto;
+  }
 }
