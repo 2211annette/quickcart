@@ -1,0 +1,158 @@
+.cart-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Title */
+.cart-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Empty State */
+.empty-cart-page {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-cart-page p {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Layout */
+.cart-page-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
+/* Left side (items list) */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual item */
+.cart-page-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.cart-page-item:hover {
+  transform: translateY(-2px);
+}
+
+.cart-page-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Item details */
+.cart-page-item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.cart-page-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Quantity controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.quantity-controls button {
+  padding: 5px 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.quantity-controls button:hover {
+  background: #ddd;
+}
+
+/* Remove button */
+.cart-page-item button {
+  margin-left: auto;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-page-item button:hover {
+  background: #e60000;
+}
+
+/* Right side (summary) */
+.cart-summary {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+/* Total */
+.cart-summary h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Checkout button */
+.checkout-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cart-page-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .cart-summary {
+    position: static;
+  }
+}
